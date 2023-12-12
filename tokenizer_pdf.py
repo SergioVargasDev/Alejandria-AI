@@ -1,9 +1,31 @@
 from langchain.vectorstores import Chroma
 
+#Functionality: Chroma is a vector store, a data structure used for storing and managing vectors (typically embeddings) 
+#in a way that allows efficient retrieval and similarity searches.
+
+#Purpose: It's used to store and organize embeddings or vectors representing textual data in a manner that facilitates quick 
+#search and retrieval based on similarity metrics.
+
+
+
 from langchain.document_loaders import PyPDFLoader
 
+#Functionality: PyPDFLoader is a module used for loading and extracting content from PDF files.
+#Purpose: It allows the program to load PDF files and extract their textual content, making it accessible for further processing or analysis.
+
 from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
+
+#Functionality: SentenceTransformerEmbeddings is a module used for generating sentence embeddings.
+
+#Purpose: It's used to convert textual data (sentences, paragraphs, documents) into fixed-dimensional vectors (embeddings) 
+#that capture semantic meanings and relationships between the text elements. These embeddings can then be used for various NLP tasks.
+
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+
+#Functionality: RecursiveCharacterTextSplitter is a module used for splitting text into smaller chunks based on characters recursively.
+#Purpose: It's employed to tokenize or break down larger chunks of text (documents, paragraphs) into smaller units, 
+#often for further analysis or processing. This process is crucial for organizing and handling textual data efficiently.
 
 
 # loader = PyPDFLoader("pdfs/economia.pdf")

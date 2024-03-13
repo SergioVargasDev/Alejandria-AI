@@ -1,4 +1,5 @@
-# ai model!
+# Alejandria AI: Enhancing PDF Interaction with Advanced AI
+
 
 ## TODO
 explain how it works here

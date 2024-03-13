@@ -11,7 +11,7 @@ The primary purpose of Alejandria AI is to facilitate seamless access to informa
 
 ## Key Features
 
--PDF-to-Vector Conversion: Utilizes Meta's Lama LLM technology to transform traditional PDF content into vector representations, enabling sophisticated semantic searches and data manipulation.
+* PDF-to-Vector Conversion: Utilizes Meta's Lama LLM technology to transform traditional PDF content into vector representations, enabling sophisticated semantic searches and data manipulation.
 -Precise Answer Selection: Implements Meta's Lama LLM for indexing and meticulous source citing, ensuring that the retrieved information is both accurate and verifiable.
 -Vectorial Visualization: Incorporates Chroma for the vectorial visualization of PDF content, allowing users to visually comprehend the relationships between their queries and the document's information.
 -Customizable AI Integration: Tailors Softtek's LLM to meet specific company needs, ensuring seamless integration and optimal performance within various operational contexts.

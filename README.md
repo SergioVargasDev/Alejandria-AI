@@ -24,6 +24,17 @@ The primary purpose of Alejandria AI is to facilitate seamless access to informa
 * Chroma: Employs this vector store for efficient management and retrieval of vectorized data, crucial for the project's visualization features.
 * Temporary File Handling: Utilizes tempfile among other libraries for effective temporary file management, ensuring data integrity and security.
 
+## Contribution 
+
+### To Sofftek: 
+Alejandria AI optimizes workflows, enhances knowledge management, and improves customer support through Softtek’s LLM, delivering tailored, AI-driven solutions.
+
+### To other companies: 
+Alejandria AI enables precise data retrieval, boosts productivity, and transforms static documents into actionable insights with customizable AI tools.
+
+To Other Companies:
+Alejandria AI enables precise data retrieval, boosts productivity, and transforms static documents into actionable insights with customizable AI tools.
+
 ## Conclusion
 
 Alejandria AI represents a significant leap forward in how we interact with and understand the content within PDF documents. By harnessing the power of advanced AI technologies, this project not only simplifies information retrieval but also paves the way for innovative data visualization and analysis methods. Whether for academic research, professional documentation, or personal use, Alejandria AI offers a transformative tool that enhances our ability to access and engage with knowledge.

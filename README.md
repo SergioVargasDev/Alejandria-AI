@@ -26,10 +26,10 @@ The primary purpose of Alejandria AI is to facilitate seamless access to informa
 
 ## Contribution 
 
-### To Sofftek: 
+### To Sofftek
 Alejandria AI optimizes workflows, enhances knowledge management, and improves customer support through Softtek’s LLM, delivering tailored, AI-driven solutions.
 
-### To other companies: 
+### To other companies 
 Alejandria AI enables precise data retrieval, boosts productivity, and transforms static documents into actionable insights with customizable AI tools.
 
 ## Conclusion

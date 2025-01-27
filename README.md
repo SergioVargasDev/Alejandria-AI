@@ -32,9 +32,6 @@ Alejandria AI optimizes workflows, enhances knowledge management, and improves c
 ### To other companies: 
 Alejandria AI enables precise data retrieval, boosts productivity, and transforms static documents into actionable insights with customizable AI tools.
 
-To Other Companies:
-Alejandria AI enables precise data retrieval, boosts productivity, and transforms static documents into actionable insights with customizable AI tools.
-
 ## Conclusion
 
 Alejandria AI represents a significant leap forward in how we interact with and understand the content within PDF documents. By harnessing the power of advanced AI technologies, this project not only simplifies information retrieval but also paves the way for innovative data visualization and analysis methods. Whether for academic research, professional documentation, or personal use, Alejandria AI offers a transformative tool that enhances our ability to access and engage with knowledge.

@@ -38,6 +38,6 @@ Alejandria AI represents a significant leap forward in how we interact with and 
 
 ## NOTES
 - please download `ggml-model-gpt4all-falcon-q4_0.bin` from [here](https://gpt4all.io/index.html) and put it in the root of the ai folder
-  <img src = "Team.jpg" width = "412">
+  <img src = "Team.jpg" align = "center" width = "518">
     ![WEB_PAGE](vectorial_brain.jpg)
 

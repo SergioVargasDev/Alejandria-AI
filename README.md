@@ -41,5 +41,6 @@ Alejandria AI represents a significant leap forward in how we interact with and 
 <div align = "center">
     <img src = "Team.jpg" width = "518">
 </div>
-    ![WEB_PAGE](vectorial_brain.jpg)
-
+<div align = "center">
+    <img src = "vectorial_brain.jpg" width = "518">
+</div>

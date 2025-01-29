@@ -36,12 +36,14 @@ Alejandria AI enables precise data retrieval, boosts productivity, and transform
 
 Alejandria AI represents a significant leap forward in how we interact with and understand the content within PDF documents. By harnessing the power of advanced AI technologies, this project not only simplifies information retrieval but also paves the way for innovative data visualization and analysis methods. Whether for academic research, professional documentation, or personal use, Alejandria AI offers a transformative tool that enhances our ability to access and engage with knowledge.
 
+## NOTES
+- please download `ggml-model-gpt4all-falcon-q4_0.bin` from [here](https://gpt4all.io/index.html) and put it in the root of the ai folder
+- 
 <div align = "center">
     <img src = "vectorial_brain.jpg" width = "518">
 </div>
 
-## NOTES
-- please download `ggml-model-gpt4all-falcon-q4_0.bin` from [here](https://gpt4all.io/index.html) and put it in the root of the ai folder
+## Team
 <div align = "center">
     <img src = "Team.jpg" width = "518">
 </div>

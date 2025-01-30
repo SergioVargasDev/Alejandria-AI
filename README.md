@@ -19,16 +19,16 @@ The primary purpose of Alejandria AI is to facilitate seamless access to informa
 ## Technology Stack
 
 ### Natural Language Processing:
-LangChain: Utilizes Meta’s Lama LLM for semantic searches and advanced text analysis.
+* LangChain: Utilizes Meta’s Lama LLM for semantic searches and advanced text analysis.
 
 ### AI & Chatbot Integration:
-OpenAI: Enhances user interaction with chatbot functionality for dynamic question-answering.
+* OpenAI: Enhances user interaction with chatbot functionality for dynamic question-answering.
 
 ### Programming Language:
-Python: Chosen for its versatility, efficiency, and extensive AI & data processing capabilities.
+* Python: Chosen for its versatility, efficiency, and extensive AI & data processing capabilities.
 
 ### Vector Data Management:
-Chroma: Manages vectorized data for efficient retrieval, indexing, and visualization.
+* Chroma: Manages vectorized data for efficient retrieval, indexing, and visualization.
 
 ## Contribution 
 

@@ -1,6 +1,6 @@
 # Alejandria AI
 
-Alejandria AI is an enterprise document intelligence platform developed during HackMTY 2024, receiving an MLH Hackathon Honorable Mention. The system transforms static PDF documents into dynamic, searchable knowledge bases through advanced AI-powered document parsing and contextual search capabilities. Built with an Angular frontend and Spring Boot business logic, the platform processes 860+ page PDFs with vector indexing and achieves 40% improvement in answer precision through Meta's LLaMA integration and secure on-premises deployment.
+Alejandria AI is an enterprise document intelligence platform developed during HackMTY 2024, receiving an MLH Hackathon Honorable Mention. The system transforms static PDF documents into dynamic, searchable knowledge bases through advanced AI-powered document parsing and contextual search capabilities. Built with a Next.js frontend and Nest.js business logic, the platform processes 860+ page PDFs with vector indexing and achieves 40% improvement in answer precision through Meta's LLaMA integration and secure on-premises deployment.
 
 ## Features
 
@@ -14,10 +14,10 @@ Alejandria AI is an enterprise document intelligence platform developed during H
 ## Tech Stack
 
 ### Frontend
-- **Angular** – Modern TypeScript framework for responsive user interface and document interaction portal.
+- **Next.js** – Modern React framework with SSR/SSG capabilities for responsive user interface and document interaction portal.
 
 ### Backend
-- **Spring Boot** – Enterprise-grade Java framework handling business logic and document processing workflows.
+- **Nest.js** – Enterprise-grade TypeScript framework handling business logic and document processing workflows.
 
 ### Database
 - **PostgreSQL** – Robust relational database for document metadata, user sessions, and query analytics.
@@ -34,8 +34,8 @@ Alejandria AI is an enterprise document intelligence platform developed during H
 
 ### Prerequisites
 
-- **Java 17+** - Required for Spring Boot backend
-- **Node.js 18.0+** - Required for Angular frontend
+- **Node.js 18.0+** - Required for Next.js frontend and Nest.js backend
+- **npm or yarn** - Package manager for Node.js dependencies
 - **Python 3.8+** - For document processing and AI model integration
 - **PostgreSQL 12+** - Database for document storage and analytics
 - **Docker** - For containerized deployment (optional)
@@ -48,24 +48,24 @@ Alejandria AI is an enterprise document intelligence platform developed during H
    cd alejandria-ai
    ```
 
-2. **Backend Setup (Spring Boot)**
+2. **Backend Setup (Nest.js)**
    ```bash
    cd backend
-   ./mvnw clean install
+   npm install
    
    # Configure environment variables
-   cp application.properties.example application.properties
+   cp .env.example .env
    # Add your database credentials and API keys
    
    # Start the server
-   ./mvnw spring-boot:run
+   npm run start:dev
    ```
 
-3. **Frontend Setup (Angular)**
+3. **Frontend Setup (Next.js)**
    ```bash
    cd frontend
    npm install
-   ng serve
+   npm run dev
    ```
 
 4. **Python Processing Engine**
@@ -83,12 +83,12 @@ Alejandria AI is an enterprise document intelligence platform developed during H
    ```sql
    CREATE DATABASE alejandria_ai;
    -- Run migration scripts
-   ./mvnw flyway:migrate
+   npm run migration:run
    ```
 
 6. **Access the platform**
-   - Open your web browser and navigate to: `http://localhost:4200`
-   - The Angular interface will load with document upload and search portal
+   - Open your web browser and navigate to: `http://localhost:3000`
+   - The Next.js interface will load with document upload and search portal
 
 ### System Configuration
 
@@ -105,22 +105,27 @@ The platform can be configured through admin interface:
 alejandria-ai/
 ├── frontend/
 │   ├── src/
-│   │   ├── app/
-│   │   │   ├── components/  # Angular components for document interface
-│   │   │   ├── services/    # API integration and data services
-│   │   │   └── modules/     # Feature modules and routing
-│   │   └── assets/          # Static assets and configurations
+│   │   ├── app/             # App Router directory (Next.js 13+)
+│   │   │   ├── components/  # React components for document interface
+│   │   │   ├── api/         # API routes and endpoints
+│   │   │   └── (routes)/    # Page routes and layouts
+│   │   ├── lib/             # Utility functions and configurations
+│   │   └── styles/          # Global styles and Tailwind CSS
+│   ├── public/              # Static assets
+│   ├── next.config.js       # Next.js configuration
+│   └── package.json
 ├── backend/
 │   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/alejandria/
-│   │   │   │       ├── controllers/  # REST controllers and endpoints
-│   │   │   │       ├── services/     # Business logic services
-│   │   │   │       └── repositories/ # Data access layer
-│   │   │   └── resources/
-│   │   │       ├── application.properties
-│   │   │       └── db/migration/     # Database migrations
+│   │   ├── modules/         # Feature modules
+│   │   │   ├── documents/   # Document processing modules
+│   │   │   ├── search/      # Search and query modules
+│   │   │   └── auth/        # Authentication modules
+│   │   ├── common/          # Shared utilities and decorators
+│   │   ├── database/        # Database configuration and entities
+│   │   └── main.ts          # Application entry point
+│   ├── migrations/          # TypeORM database migrations
+│   ├── nest-cli.json        # Nest.js CLI configuration
+│   └── package.json
 ├── ai-engine/
 │   ├── models/             # LLaMA and embedding models
 │   ├── processors/         # PDF parsing and vector generation
@@ -135,11 +140,11 @@ alejandria-ai/
 
 #### 1. Development Mode
 ```bash
-# Start Spring Boot backend
-cd backend && ./mvnw spring-boot:run
+# Start Nest.js backend
+cd backend && npm run start:dev
 
-# Start Angular frontend (in new terminal)
-cd frontend && ng serve
+# Start Next.js frontend (in new terminal)
+cd frontend && npm run dev
 
 # Start Python AI engine (in new terminal)
 cd ai-engine && python main.py
@@ -147,14 +152,17 @@ cd ai-engine && python main.py
 
 #### 2. Production Deployment
 ```bash
-# Build Angular frontend for production
-cd frontend && ng build --prod
+# Build Next.js frontend for production
+cd frontend && npm run build
 
-# Build Spring Boot backend
-cd backend && ./mvnw clean package
+# Build Nest.js backend
+cd backend && npm run build
 
 # Run production backend
-java -jar target/alejandria-ai-*.jar
+cd backend && npm run start:prod
+
+# Start production frontend
+cd frontend && npm start
 
 # Deploy AI processing service
 cd ai-engine && python -m gunicorn main:app
@@ -209,6 +217,27 @@ For deployment in corporate environments:
 - Use GPU acceleration for LLaMA inference when available
 - Monitor database query performance and index usage
 
+### Development Scripts
+
+**Frontend (Next.js):**
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+npm run type-check   # TypeScript type checking
+```
+
+**Backend (Nest.js):**
+```bash
+npm run start:dev      # Start in development mode
+npm run start:debug    # Start in debug mode
+npm run build          # Build the application
+npm run start:prod     # Start production server
+npm run test           # Run unit tests
+npm run test:e2e       # Run end-to-end tests
+npm run migration:run  # Run database migrations
+```
+
 ## NOTES
-- please download `ggml-model-gpt4all-falcon-q4_0.bin` from [here](https://gpt4all.io/index.html) and put it in the root of the ai folder
-<div align = "center">
+- Please download `ggml-model-gpt4all-falcon-q4_0.bin` from [here](https://gpt4all.io/index.html) and put it in the root of the ai folder
